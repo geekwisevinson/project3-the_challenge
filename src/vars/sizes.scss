@@ -1,0 +1,51 @@
+$text-h1: 30px;
+$text-h2: 24px;
+$text-h3: 20px;
+$text-h4: 16px;
+$text-h5: 14px;
+
+$mq-mobile-s-width: 320px;
+$mq-mobile-m-width: 375px;
+$mq-mobile-l-width: 425px;
+$mq-tablet-width: 768px;
+$mq-laptop-width: 1024px;
+$mq-laptop-l-width: 1440px;
+$mq-4k-width: 2560px;
+
+.text-header{
+	@media (max-width: $mq-mobile-s-width) {
+		color:red;
+		background-color: purple;
+		font-size: $text-h1;
+	}
+	@media (min-width: $mq-mobile-m-width) {
+		color: orange;
+		background-color: pink;
+		font-size: $text-h3;
+	}
+	@media (min-width: $mq-mobile-l-width) {
+		color: yellow;
+		background-color: green;
+		font-size: $text-h3;
+	}
+	@media (min-width: $mq-tablet-width) {
+		color: black;
+		background-color: blue;
+		font-size: $text-h3;
+	}
+	@media (min-width: $mq-laptop-width) {
+		color: black;
+		background-color: purple;
+		font-size: $text-h3;
+	}
+	@media (min-width: $mq-laptop-l-width) {
+		color: black;
+		background-color: pink;
+		font-size: $text-h3;
+	}
+	@media (min-width: $mq-4k-width) {
+		color: black;
+		background-color: black;
+		font-size: $text-h3;
+	}
+}

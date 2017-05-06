@@ -1,0 +1,26 @@
+/* FUNCTIONS */
+@import "vars/functions";
+
+/* FONTS */
+@import "vars/fonts";
+
+/* COLORS */
+@import "vars/colors";
+
+/* PADDINGS */
+$padding-body: 25px;
+
+/* SIZES */
+@import "vars/sizes";
+$grid-box: 80px;
+$grid-box-open: 180px;
+
+/*GLOBAL STYLES*/
+@import "vars/globals";
+
+#app {
+	font-family: $primary-font-family;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: $primary-font-size;
+}

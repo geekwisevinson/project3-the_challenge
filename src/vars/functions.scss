@@ -1,0 +1,6 @@
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+@function function-relative-size($val1, $val2){
+	@return strip-unit($val1) * strip-unit($val2);
+}
