@@ -3,6 +3,7 @@
 <script type="text/babel">
   import { mapGetters } from 'vuex';
   import { API_URL } from '../../../../../config';
+  import Api from '../../../../../services/api'
   import Filters from '../../../../../js-modules/filters';
 
   const HomeLogin = {
@@ -27,6 +28,20 @@
           },
         );
       },
+      signUp(){
+      	let data = {
+      		user:{
+			      name: this.name,
+			      email: this.email,
+			      password: this.password
+          }
+
+        }
+      	Api.users.signUp(data).then(user=>{
+      		console.log(user);
+		      this.$router.push({ path: '' });
+        })
+      }
     },
     computed: {
       ...mapGetters({

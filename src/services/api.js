@@ -9,6 +9,8 @@ const Api = {
 	init (context, store) {
 		this.http = context.http;
 		this.store = store;
+		console.log('store',store)
+		users.init(this);
 	},
 	get (url, params) {
 		let options =  {
