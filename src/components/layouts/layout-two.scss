@@ -2,3 +2,15 @@
 header.mdl-layout__header{
 	background-color: $colors-black;
 }
+
+.mdl-layout{
+	background-color: orange;
+}
+
+.primary{
+	background-color: firebrick;
+}
+
+.mdl-button .mdl-button .mdl-button .mdl-button>*{
+	color: red !important;
+}
