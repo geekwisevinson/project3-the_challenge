@@ -20,9 +20,9 @@
           { email: this.email, password: this.password })
           .then((result) => {
             this.$store.commit('setLoggedInUser', result.body.user);
-            window.localStorage.setItem('mcapi_user', JSON.stringify(result.body.user)); // eslint-disable-line
+            window.localStorage.setItem('power_user', JSON.stringify(result.body.user)); // eslint-disable-line
             this.$store.commit('setToken', result.body.token);
-            window.localStorage.setItem('mcapi_token', result.body.token); // eslint-disable-line
+            window.localStorage.setItem('power_token', result.body.token); // eslint-disable-line
             this.$router.push({ path: '/home' });
           },
         );
@@ -37,8 +37,8 @@
     filters: Filters,
     created() {
       this.message = this.$store.getters.getMessage;
-      if (window.localStorage.getItem('mcapi_token')) { // eslint-disable-line
-        this.$store.commit('setToken', window.localStorage.getItem('mcapi_token')); // eslint-disable-line
+      if (window.localStorage.getItem('power_token')) { // eslint-disable-line
+        this.$store.commit('setToken', window.localStorage.getItem('power_token')); // eslint-disable-line
         this.$router.push({ path: '/home' });
       }
     },
